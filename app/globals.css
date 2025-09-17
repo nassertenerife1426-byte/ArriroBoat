@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Custom Color Palette */
+  --primary-100: #003366;
+  --primary-200: #3f5c94;
+  --primary-300: #a1b8f8;
+  --accent-100: #FF9933;
+  --accent-200: #903e00;
+  --text-100: #FFFFFF;
+  --text-200: #e0e0e0;
+  --bg-100: #CCE6FF;
+  --bg-200: #c2dcf5;
+  --bg-300: #9bb4cc;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'DM Sans', sans-serif;
+  }
+}
+
+/* Custom utility classes for our color palette */
+.bg-primary-100 { background-color: var(--primary-100); }
+.bg-primary-200 { background-color: var(--primary-200); }
+.bg-primary-300 { background-color: var(--primary-300); }
+.bg-accent-100 { background-color: var(--accent-100); }
+.bg-accent-200 { background-color: var(--accent-200); }
+.bg-text-100 { background-color: var(--text-100); }
+.bg-text-200 { background-color: var(--text-200); }
+.bg-bg-100 { background-color: var(--bg-100); }
+.bg-bg-200 { background-color: var(--bg-200); }
+.bg-bg-300 { background-color: var(--bg-300); }
+
+.text-primary-100 { color: var(--primary-100); }
+.text-primary-200 { color: var(--primary-200); }
+.text-primary-300 { color: var(--primary-300); }
+.text-accent-100 { color: var(--accent-100); }
+.text-accent-200 { color: var(--accent-200); }
+.text-text-100 { color: var(--text-100); }
+.text-text-200 { color: var(--text-200); }
+
+.border-primary-100 { border-color: var(--primary-100); }
+.border-primary-200 { border-color: var(--primary-200); }
+.border-primary-300 { border-color: var(--primary-300); }
+.border-accent-100 { border-color: var(--accent-100); }
+
+.hover\:bg-primary-200:hover { background-color: var(--primary-200); }
+.hover\:bg-accent-200:hover { background-color: var(--accent-200); }
+
+/* Animation classes */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+.animate-wave {
+  animation: wave 4s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% { transform: translateX(0px); }
+  50% { transform: translateX(10px); }
+}
