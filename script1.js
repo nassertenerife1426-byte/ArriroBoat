@@ -33,4 +33,5 @@ function testInvertirCadena() {
 // Ejecutar los tests
 testSumar();
 testInvertirCadena();
-console.log("Tests linea de prueba en mainnnnn");
+console.log("Tests linea");
+
